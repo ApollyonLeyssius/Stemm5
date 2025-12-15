@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class playerMovement : MonoBehaviour
     private bool isGrounded;
     private Rigidbody2D rb;
     private Animator animator;
+    public Image healthbar;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,6 +48,8 @@ public class playerMovement : MonoBehaviour
             }
             getanimation(moveInput);
         }
+        healthbar.fillAmount = health / 100f;
+
     }
 
     private void FixedUpdate()
