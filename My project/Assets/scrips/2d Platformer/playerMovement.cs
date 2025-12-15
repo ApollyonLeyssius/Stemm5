@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
+    public int coins = 0;
     public int health = 100;
     [SerializeField]private float speed = 5.0f;
     [SerializeField]private float jumpForce = 10.0f;
